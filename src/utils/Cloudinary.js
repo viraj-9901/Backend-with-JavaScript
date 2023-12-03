@@ -21,8 +21,11 @@ const cloudinaryFileUploder = async (localFilePath) => {
         //file successfully uploaded on cloudinary
         console.log('file successfully uploaded on cloudinary: ',response.url);
         return response
+
     } catch (error) {
         fs.unlinkSync(localFilePath)
         //locally saved file removed as a error accouring in cloudinary
     }
 }
+
+export {cloudinaryFileUploder}
